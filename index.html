@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>My first AngularJS App</title>
+  </head>
+  <body>
+    <div ng-controller="MyController">
+		<p>Change the Secret message and key inside the input field, and you will see the name in the header changes accordingly.</p>
+  		<form name="myForm">
+    		Secret Message: <input name="msgInp" type="text" ng-model="msg" required>
+    		Key: <input name="keyInp" type="number" ng-model="key" required>
+  		</form>
+     
+      	<button ng-click="displayEncrypted()">Encrypt</button>
+		<h1> Result: {{encryptedRes}}</h1>
+		<button ng-click="displayDecoded()">Decode</button>
+		<h1> Result: {{decodedRes}}</h1>
+ 		
+	</div>
+  </body>
+</html>
